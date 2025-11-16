@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      prefWidth="220" spacing="15" alignment="TOP_CENTER"
+      style="-fx-background-color: #1E1E2F; -fx-padding: 25;">
+
+    <Label text="CITY MANAGER" style="-fx-text-fill: white; -fx-font-size: 20;" />
+
+    <Button text="Dashboard" styleClass="sideBtn"/>
+    <Button text="Citizens" styleClass="sideBtn"/>
+    <Button text="Events" styleClass="sideBtn"/>
+    <Button text="Transport" styleClass="sideBtn"/>
+    <Button text="Services" styleClass="sideBtn"/>
+    <Button text="Pollution" styleClass="sideBtn"/>
+    <Button text="Feedback" styleClass="sideBtn"/>
+    <Button text="Notifications" styleClass="sideBtn"/>
+
+    <stylesheets>
+        <URL value="@styles.css" />
+    </stylesheets>
+</VBox>

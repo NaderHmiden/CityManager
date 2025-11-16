@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Controllers.CitizenController">
+
+    <top>
+        <fx:include source="Header.fxml"/>
+    </top>
+
+    <left>
+        <fx:include source="Sidebar.fxml"/>
+    </left>
+
+    <center>
+        <VBox spacing="20" style="-fx-padding: 20;">
+            
+            <HBox spacing="10">
+                <TextField fx:id="txtName" promptText="Citizen name"/>
+                <TextField fx:id="txtAge" promptText="Age"/>
+                <Button text="Add Citizen" onAction="#addCitizen"/>
+            </HBox>
+
+            <TableView fx:id="tableCitizens">
+                <columns>
+                    <TableColumn text="Name"/>
+                    <TableColumn text="Age"/>
+                    <TableColumn text="Status"/>
+                </columns>
+            </TableView>
+
+        </VBox>
+    </center>
+
+    <stylesheets>
+        <URL value="@styles.css" />
+    </stylesheets>
+
+</BorderPane>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Controllers.PollutionController">
+
+    <top>
+        <fx:include source="Header.fxml"/>
+    </top>
+
+    <left>
+        <fx:include source="Sidebar.fxml"/>
+    </left>
+
+    <center>
+        <VBox spacing="15" style="-fx-padding: 20;">
+
+            <HBox spacing="10">
+                <TextField fx:id="txtLocation" promptText="Location"/>
+                <TextField fx:id="txtLevel" promptText="Pollution level"/>
+                <Button text="Add Pollution Data" onAction="#addPollution"/>
+            </HBox>
+
+            <TableView fx:id="tablePollution">
+                <columns>
+                    <TableColumn text="Location"/>
+                    <TableColumn text="Level"/>
+                    <TableColumn text="Date"/>
+                </columns>
+            </TableView>
+
+        </VBox>
+    </center>
+
+    <stylesheets>
+        <URL value="@styles.css" />
+    </stylesheets>
+
+</BorderPane>

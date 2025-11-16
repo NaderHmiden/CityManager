@@ -9,5 +9,17 @@ package model;
  * @author manso
  */
 public class Transport {
-    
+    private final String type;
+    private final String name;
+    private final String location;
+
+    public Transport(String name, String type, String location) {
+        this.name = name;
+        this.type = type;
+        this.location = location;
+    }
+
+    public String type() { return type; }
+    public String name() { return name; }
+    public String location() { return location; }
 }

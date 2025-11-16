@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Controllers.EventController">
+
+    <top>
+        <fx:include source="Header.fxml"/>
+    </top>
+
+    <left>
+        <fx:include source="Sidebar.fxml"/>
+    </left>
+
+    <center>
+        <VBox spacing="15" style="-fx-padding: 20;">
+            <HBox spacing="10">
+                <TextField fx:id="txtEventName" promptText="Event name"/>
+                <TextField fx:id="txtLocation" promptText="Location"/>
+                <Button text="Create Event" onAction="#addEvent"/>
+            </HBox>
+
+            <TableView fx:id="tableEvents">
+                <columns>
+                    <TableColumn text="Name"/>
+                    <TableColumn text="Location"/>
+                    <TableColumn text="Date"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+    <stylesheets>
+        <URL value="@styles.css" />
+    </stylesheets>
+
+</BorderPane>

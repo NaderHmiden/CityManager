@@ -1,0 +1,57 @@
+<HBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller=""
+      spacing="0" style="-fx-background-color: #f5f5f7;">
+
+    <!-- Sidebar -->
+    <VBox>
+        <fx:include source="Sidebar.fxml"/>
+    </VBox>
+
+    <!-- Main content -->
+    <VBox spacing="15" HBox.hgrow="ALWAYS">
+
+        <!-- Header -->
+        <fx:include source="Header.fxml"/>
+
+        <!-- Dashboard content -->
+        <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS" style="-fx-padding: 20;">
+            <VBox spacing="25">
+
+                <!-- Dashboard Cards -->
+                <HBox spacing="25">
+                    <VBox styleClass="card">
+                        <Label text="Citizens"/>
+                        <Label fx:id="lblTotalCitizens" styleClass="number"/>
+                    </VBox>
+                    <VBox styleClass="card">
+                        <Label text="Active Events"/>
+                        <Label fx:id="lblActiveEvents" styleClass="number"/>
+                    </VBox>
+                    <VBox styleClass="card">
+                        <Label text="Transport Lines"/>
+                        <Label fx:id="lblTotalTransport" styleClass="number"/>
+                    </VBox>
+                    <VBox styleClass="card">
+                        <Label text="Services"/>
+                        <Label fx:id="lblTotalServices" styleClass="number"/>
+                    </VBox>
+                </HBox>
+
+                <!-- Statistics Table -->
+                <Label text="Statistics" style="-fx-font-size: 22; -fx-font-weight: bold;"/>
+                <TableView fx:id="tableStats">
+                    <columns>
+                        <TableColumn text="Category"/>
+                        <TableColumn text="Value"/>
+                    </columns>
+                </TableView>
+
+            </VBox>
+        </ScrollPane>
+    </VBox>
+
+    <stylesheets>
+        <URL value="@styles.css"/>
+    </stylesheets>
+
+</HBox>
